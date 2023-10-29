@@ -1,0 +1,18 @@
+
+Working Steps:
+we need two images - a content image (the subject you want to paint) and 
+a style image.
+
+The algorithm uses a pre-trained neural network (like VGG19) to understand the content of the content image.
+It does this by looking at the activations of the network’s layers when we input the content image. 
+The higher layers of the network capture the high-level content in terms of objects and their arrangement in the input image but not the exact pixel values of the original image.
+
+The algorithm also needs to understand the style of the style image.
+It does this by looking at how different features in different layers of the network correlate when we input the style image.
+These correlations capture textures, colors, and visual patterns in the image, which constitute its style.
+
+The algorithm starts with a blank canvas (an initial random image)
+and tries to change this image to match both the content of the content image and the style of the style image.
+It does this by defining a loss function that measures how different the content and style of our current image are from our content
+and style images. The algorithm then uses gradient descent to minimize this loss function and iteratively updates our image
+until it looks like our desired artwork!
